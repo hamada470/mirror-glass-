@@ -86,30 +86,48 @@
             background-color: #0056b3;
         }
 
-        /* قسم البانر الرئيسي */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('Cn3.jpg') no-repeat center center/cover;
-            height: 75vh;
+        /* البانر الرئيسي الأول (صورة جذابة تلفت نظر الزائر فوراً مع خلفية داكنة خفيفة وتايتل) */
+        .hero-banner {
+            margin-top: 75px;
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background: url('C3.jpg') no-repeat center center/cover;
             display: flex;
-            flex-direction: column;
+            align-items: flex-end;
             justify-content: center;
-            align-items: center;
             text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.2) 90%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
             color: #fff;
             padding: 0 20px;
-            margin-top: 70px;
+            max-width: 800px;
         }
 
-        .hero h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
+        .hero-content h1 {
+            font-size: 32px;
             font-weight: 900;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
-        .hero p {
-            font-size: 18px;
-            max-width: 650px;
-            margin-bottom: 25px;
+        .hero-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #ddd;
         }
 
         .cta-main-btn {
@@ -121,54 +139,14 @@
             font-weight: 700;
             text-decoration: none;
             box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             transition: transform 0.3s;
         }
 
         .cta-main-btn:hover {
             transform: scale(1.05);
-        }
-
-        /* قسم الصورة البارزة الأولى في بداية الموقع */
-        .featured-banner-section {
-            max-width: 1200px;
-            margin: 40px auto 20px auto;
-            padding: 0 20px;
-        }
-
-        .featured-card {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            border: 2px solid #007bff22;
-        }
-
-        .featured-card img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
-        .featured-content {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .featured-content h2 {
-            font-size: 26px;
-            color: #111;
-            margin-bottom: 10px;
-            font-weight: 900;
-        }
-
-        .featured-content p {
-            color: #551;
-            color: #666;
-            font-size: 16px;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         /* قسم معرض الأعمال */
@@ -311,23 +289,15 @@
         </a>
     </header>
 
-    <!-- واجهة البانر الرئيسية -->
-    <section class="hero">
-        <h1>أفضل خدمات تركيب الزجاج، السيكوريت والمرايا بالسعودية</h1>
-        <p>نقدم أحدث تصميمات الواجهات الزجاجية، أبواب السيكوريت، الشاور بوكس، والدرابزين والديكورات بأعلى معايير الجودة والسرعة في التنفيذ.</p>
-        <a href="https://wa.me/966510330571" class="cta-main-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i> تواصل عبر واتساب فوراً
-        </a>
-    </section>
-
-    <!-- أول صورة بارزة من أعمالك في واجهة الموقع -->
-    <section class="featured-banner-section">
-        <div class="featured-card">
-            <img src="Cn3.jpg" alt="أبرز أعمال تركيب الزجاج والسكريت">
-            <div class="featured-content">
-                <h2>أحدث أعمالنا المميزة في تركيب زجاج السيكوريت والواجهات</h2>
-                <p>نحرص على تقديم أعلى مستويات الدقة والاحترافية في تنفيذ وتوصيل وتركيب كافة أنواع الزجاج المعالج والواجهات الزجاجية الفاخرة التي تضفي لمسة جمالية وأمان عالي لمنشأتك.</p>
-            </div>
+    <!-- البانر الرئيسي الأول بصورة واضحة ومباشرة تلفت نظر الزائر -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>أفضل خدمات تركيب زجاج سيكوريت ومرايا بالسعودية</h1>
+            <p>احترافية عالية في تنفيذ واجهات المحلات، الأبواب السكريت، الشاور بوكس، والدرابزين.</p>
+            <a href="https://wa.me/966510330571" class="cta-main-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> تواصل عبر واتساب فوراً
+            </a>
         </div>
     </section>
 
