@@ -1,1 +1,62 @@
+<!-- زر الواتساب العائم مع الاهتزاز المضيء -->
+<a href="https://wa.me/966510330571" class="floating-btn whatsapp-btn" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
+<!-- زر الاتصال العائم -->
+<a href="tel:+966510330571" class="floating-btn call-btn" aria-label="Call Us">
+    <i class="fas fa-phone-alt"></i>
+</a>
+
+<style>
+/* تنسيق الأزرار الدائرية الكبيرة */
+.floating-btn {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
+/* مكان زر الاتصال */
+.call-btn {
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+}
+
+/* مكان زر الواتساب مع تأثير الاهتزاز المضيء */
+.whatsapp-btn {
+    bottom: 95px;
+    right: 20px;
+    background-color: #25d366;
+    animation: glow-shake 1.5s infinite;
+}
+
+/* أنيميشن الاهتزاز والإضاءة (Glow & Shake) */
+@keyframes glow-shake {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    50% {
+        transform: scale(1.08) rotate(10deg);
+        box-shadow: 0 0 20px 10px rgba(37, 211, 102, 0.4);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+</style>
